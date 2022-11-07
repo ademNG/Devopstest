@@ -54,11 +54,7 @@
 			<version>3.0.0</version>
 		</dependency>
 		
-		<dependency>
-    <groupId>org.mockito</groupId>
-    <artifactId>mockito-junit-jupiter</artifactId>
-    <scope>test</scope>
-</dependency>
+		
 <dependency>
     <groupId>org.junit.jupiter</groupId>
     <artifactId>junit-jupiter-api</artifactId>
@@ -99,7 +95,7 @@
 <repository>
 <id>deploymentRepo</id>
 <name>Nexus Repository</name>
-<url>http://localhost:8081/repository/maven-releases/</url>
+<url>http://http://172.20.10.14:8081/repository/maven-releases/</url>
 </repository>
 </distributionManagement>
 
