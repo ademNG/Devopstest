@@ -89,6 +89,7 @@
 				</configuration>
 			</plugin>
 			
+		
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
@@ -96,13 +97,12 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	<distributionManagement>
-<repository>
-<id>deploymentRepo</id>
-<name>Nexus Repository</name>
-<url>http://172.20.10.14:8081/repository/maven-releases/</url>
-</repository>
+<distributionManagement>
+ <repository>
+   <id>deploymentRepo</id>
+   <name>Nexus Repository</name>
+   <url>http://172.20.10.14:8081/repository/maven-releases/</url>
+ </repository>
 </distributionManagement>
 
 </project>
