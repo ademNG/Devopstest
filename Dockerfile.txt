@@ -1,4 +1,0 @@
-FROM openjdk:8
-EXPOSE 8080
-ADD target/DevTest.jar DevTest.jar
-ENTRYPOINT ["java","-jar","/DevTest.jar"]
