@@ -6,19 +6,20 @@ services:
    container_name: mysqldb
    restart: unless-stopped
    environment:
-     MYSQL_DATABASE=dbachat
-     MYSQL_ALLOW_EMPTY_PASSWORD=true
+    - MYSQL_DATABASE=dbachat
+     - MYSQL_ALLOW_EMPTY_PASSWORD=true
    ports:
-   - 3306:3306
+   - "3306:3306"
    volumes:
    - db:/var/lib/mysql
- service_app:
+app:
    container_name: spring
    image: ademng/achat
+   depends_on:
+     - mysqldb
+   build: .
    restart: on-failure
    ports:
-   - 8089:8089
-   depends_on:
-   - mysqldb
+     - "8089:8089"
    
 
