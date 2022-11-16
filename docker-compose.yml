@@ -6,6 +6,7 @@ services:
    restart: unless-stopped
    environment:
      - MYSQL_DATABASE=dbachat
+     - MYSQL_ALLOW_EMPTY_PASSWORD=true
    ports:
       - "3307:3307"
    volumes:
