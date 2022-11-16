@@ -3,16 +3,15 @@ version: "2"
 services:
  mysqldb:
    image: mysql:5.7
-   container_name: mysqldb
    restart: unless-stopped
    environment:
-    - MYSQL_DATABASE=dbachat
+     - MYSQL_DATABASE=dbachat
      - MYSQL_ALLOW_EMPTY_PASSWORD=true
    ports:
-   - "3306:3306"
+      - "3307:3307"
    volumes:
-   - db:/var/lib/mysql
-service_app:
+      - db:/var/lib/mysql
+ app: 
    container_name: spring
    image: ademng/achat
    depends_on:
