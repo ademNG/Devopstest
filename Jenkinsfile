@@ -42,11 +42,11 @@ pipeline {
 			
 		}
 		
-       /* stage('MVN SONARQUBE') {
+        stage('MVN SONARQUBE') {
             steps {
                 sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=adem1234 -DskipTests'
         }
-    }*/
+    }
     stage ("Deployement"){
 			steps{
 			    echo 'Deploying to Nexus'
@@ -60,7 +60,7 @@ pipeline {
                 }
             } 
         }
-      /*stage('Deploy our image') {
+      stage('Deploy our image') {
                	steps {
                    	script {
                        	docker.withRegistry('', registryCredential) {
@@ -68,7 +68,7 @@ pipeline {
                  		}
                 	}
             	}    
-		}*/
+		}
     
         stage('Building image docker-compose') {
           steps {
